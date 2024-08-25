@@ -1,0 +1,29 @@
+.container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color:#fdc6cc;
+    color: white;
+    border: 1px solid #ffdf6c;
+    padding: 10px;
+}
+
+a {
+    color: #c44c84; 
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #ffa7d0;
+}
+
+a:visited {
+    color: #8E44AD;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
