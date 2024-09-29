@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="kovacic_mod10_3.css">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function displayImage(imageFile, targetImage) {
+            targetImage.src = imageFile; // Update the source of the target image
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    
+    <div class="container">
+        <figure>
+            <a href="#" onmouseover="displayImage('many_buns.jpg', document.getElementById('bunImage'));" onmouseout="displayImage('cinnamon_bun.jpg', document.getElementById('bunImage'));">
+                <img id="bunImage" border="0" name="bun" src="cinnamon_bun.jpg" alt="Cinnamon Bun">
+            </a>
+            <figcaption>
+                Run your mouse over to get more cinnamon buns!~
+            </figcaption>
+        </figure>
+
+        <figure>
+            <a href="#" onmouseover="displayImage('many_cookies.jpg', document.getElementById('cookieImage'));" onmouseout="displayImage('cookie.jpg', document.getElementById('cookieImage'));">
+                <img id="cookieImage" border="0" name="cookie" src="cookie.jpg" alt="Cookie">
+            </a>
+            <figcaption>
+                Run your mouse over to get more cookies!~
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>

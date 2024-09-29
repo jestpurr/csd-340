@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: space-around; 
+}
+
+figure {
+    margin: 0; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
