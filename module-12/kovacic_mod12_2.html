@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="homework assignment">
+    <meta name="keywords" content="assignment, homework">
+    <meta name="robots" content="nofollow">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    
+    <h3>Top 10 Favorite Books</h3>
+    <div id="bookList">
+        <!-- Book list will be inserted here -->
+    </div>
+
+    <button onclick="displayBooks('asc')">Top to Bottom</button>
+    <button onclick="displayBooks('desc')">Bottom to Top</button>
+
+    <script>
+        // Array of books
+        const books = [
+            "Bad Kitty by Nick Bruel",
+            "Bad Kitty Gets a Bath by Nick Bruel",
+            "Bad Kitty Meets the Baby by Nick Bruel",
+            "Cat in the Hat by Dr. Seuss",
+            "The Giving Tree by Shel Silverstein",
+            "How the Grinch Stole Christmas by Dr. Seuss",
+            "Hop on Pop by Dr. Seuss",
+            "The Pianist by Wladyslaw Szpilman",
+            "Pride and Prejudice by Jane Austen",
+            "Goodnight Moon by Margaret Wise Brown"
+        ];
+
+        function displayBooks(order) {
+            let sortedBooks = [...books];  
+            if (order === 'asc') {
+                sortedBooks.sort();  
+            } else if (order === 'desc') {
+                sortedBooks.sort().reverse();  
+            }
+            
+            const bookListDiv = document.getElementById('bookList');
+            bookListDiv.innerHTML = '';  
+
+            sortedBooks.forEach(book => {
+                const listItem = document.createElement('div');
+                listItem.textContent = book;
+                bookListDiv.appendChild(listItem);
+            });
+        }
+
+        displayBooks('asc');
+    </script>
+
+    <div>
+        <a href="index.html">Main Directory</a>
+    </div>
+</body>
+</html>
